@@ -12,6 +12,20 @@ public class date
 	public String dayOfTheWeek; 
 	public String time;
 	
+	// Declare constructors.
+	public date(String month, String day, String dayOfTheWeek, String time) {
+		this.month = month;
+		this.day = day;
+		this.dayOfTheWeek = dayOfTheWeek;
+		this.time = time;
+	}
+	public date(String month, String day) {
+		this(month, day, "none", "none");
+	}
+	public date() {
+		this("none", "none", "none", "none");
+	}
+	
 	// Get a month.
 	public String getMonth() 
 	{
