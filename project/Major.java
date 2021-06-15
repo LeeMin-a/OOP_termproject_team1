@@ -1,7 +1,7 @@
 package project;
 
 public class Major extends Lecture {
-	int majorCredit;
+	private int majorCredit;
 	//method that number of electiveCredit is 2 or 3
 	public void Credit(){
 		int count = 0;
@@ -17,5 +17,12 @@ public class Major extends Lecture {
 		} else {
 			this.majorCredit = 2;
 		}
+	}
+
+	public int getMajorCredit() {
+		return electiveCredit;
+	}
+	public void setMajorCredit(int majorCredit) {
+		this.majorCredit = majorCredit;
 	}
 }
