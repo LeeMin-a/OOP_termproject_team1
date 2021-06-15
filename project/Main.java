@@ -343,7 +343,7 @@ public class Main {
 							planTextField1[i].setText("약속");
 							planTextField1[i].setForeground(Color.magenta);
 							planTextField2[i].setText(((Appointment)plan[i]).getInfo());
-							planTextField3[i].setText("D-day " + plan[i].getRemaingTime());						
+							planTextField3[i].setText("D-day " + plan[i].calRemainingTime());						
 						}
 						
 						
@@ -360,8 +360,8 @@ public class Main {
 							
 							planTextField1[i].setText("과제");
 							planTextField1[i].setForeground(Color.blue);
-							planTextField2[i].setText(((Appointment)plan[i]).getInfo());
-							planTextField3[i].setText("D-day " + plan[i].getRemaingTime());					
+							planTextField2[i].setText(((Assignment)plan[i]).getInfo());
+							planTextField3[i].setText("D-day " + plan[i].calRemainingTime());					
 							
 							
 						}
@@ -380,7 +380,7 @@ public class Main {
 							planTextField1[i].setText("목표");	
 							planTextField1[i].setForeground(Color.orange);
 							planTextField2[i].setText(((Goal)plan[i]).getInfo());					
-							planTextField3[i].setText("D-day " + plan[i].getRemaingTime());											
+							planTextField3[i].setText("D-day " + plan[i].calRemainingTime());											
 						}	
 												
 						break;
