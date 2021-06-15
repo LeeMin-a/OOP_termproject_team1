@@ -1,6 +1,6 @@
 package project;
 /**
- * Implements PlanInterface.
+ * Implements DateInfoInterface.
  * @author Seo Eun Su.
  * last modified 21-06-15.
  */
