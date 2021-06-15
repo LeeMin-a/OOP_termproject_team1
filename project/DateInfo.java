@@ -4,7 +4,7 @@ package project;
  * @author Seo Eun Su.
  * last modified 2021-06-12.
  */
-public class DateInfo 
+public class DateInfo
 {
 	// date Fields.
 	private String month;
@@ -31,17 +31,30 @@ public class DateInfo
 	{
 		return month;
 	}
-
+	// Set a month.
+	public void setMonth(String month) {
+		this.month = month;
+	}
+	
 	// Get a day.
 	public String getDay() 
 	{
 		return day;
 	}
-
+	// Set a day.
+	public void setDay(String day) {
+		this.day = day;
+	}
+	
 	// Get a day of the week.
 	public String getDayOfTheWeek() 
 	{
 		return dayOfTheWeek;
+	}
+	// Set a day of the week.
+	public void setDayOfTheWeek(String dayOfTheWeek) 
+	{
+		this.dayOfTheWeek = dayOfTheWeek;
 	}
 
 	// Get a time.
@@ -49,26 +62,15 @@ public class DateInfo
 	{
 		return time;
 	}
-
-	// Set a month.
-	public void setMonth(String month) {
-		this.month = month;
-	}
-
-	// Set a day.
-	public void setDay(String day) {
-		this.day = day;
-	}
-
 	// Set a time.
 	public void setTime(String time) {
 		this.time = time;
 	}
 
-	// Set a day of the week.
-	public void setDayOfTheWeek(String dayOfTheWeek) 
+	// Get a date information.
+	public String getInfo() 
 	{
-		this.dayOfTheWeek = dayOfTheWeek;
+		return  getMonth() +"월 "+ getDay() +"일 " + getTime() + "시 ";
 	}
 
 }
