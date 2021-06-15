@@ -9,7 +9,7 @@ import java.util.Date;
  * @author Seo Eun Su.
  * last modified 2021-06-15.
  */
-public class Plan extends DateInfo implements PlanInterface
+public class Plan extends DateInfo
 {
 	// fields.
 	private String content;
