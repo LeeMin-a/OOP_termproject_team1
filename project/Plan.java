@@ -7,9 +7,9 @@ import java.util.Date;
 /**
  * Implement Plan class.
  * @author Seo Eun Su.
- * last modified 2021-06-12.
+ * last modified 2021-06-15.
  */
-public class Plan extends DateInfo
+public class Plan extends DateInfo implements PlanInterface
 {
 	// fields.
 	private String content;
@@ -36,33 +36,19 @@ public class Plan extends DateInfo
 	{
 		return content;
 	}
-	// Get a remaining time that how much time is left until the appointment.
-	public String getRemainTime() 
-	{
-		return remainingDay;
-	}
-
 	// Set a content of the plan.
 	public void setContent(String content) 
 	{
 		this.content = content;
 	}
 
-	// Set a remaining time.
-	public void setRemaingTime(String remaingTime)
+	// Get a remaining time that how much time is left until the appointment.
+	public String getRemainingTime() 
 	{
-		this.remainingDay = remaingTime;
+		return remainingDay;
 	}
-
-	// Get a date information.
-	public String getInfo() 
-	{
-		return  super.getMonth() +"월 "+ super.getDay() +"일 " + super.getTime() + "시 ";
-	}
-
-
 	// Returns the remaining date (d-day) between today's date and appointment date.
-	public String getRemaingTime()
+	public String calRemainingTime()
 	{
 		Calendar getToday = Calendar.getInstance();
 
@@ -91,7 +77,7 @@ public class Plan extends DateInfo
 		long Sec = (cmpDate.getTimeInMillis() - getToday.getTimeInMillis() ) / 1000 +1; // Calculate in seconds.		
 		long Days = Sec / (24*60*60); // Calculate in days.
 
-		this.setRemaingTime(String.valueOf(Days)); // Convert to string and save.
+		this.setRemainingTime(String.valueOf(Days)); // Convert to string and save.
 
 		// If the appointment date is earlier than today. (= already a day in the past.)
 		if(Days < 0)
@@ -101,4 +87,10 @@ public class Plan extends DateInfo
 
 		return remainingDay;
 	}
+	// Set a remaining time.
+	public void setRemainingTime(String remainingTime)
+	{
+		remainingDay = remainingTime;
+	}
+	
 }
