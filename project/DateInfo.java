@@ -4,7 +4,7 @@ package project;
  * @author Seo Eun Su.
  * last modified 2021-06-12.
  */
-public class DateInfo
+public class DateInfo implements DateInfoInterface
 {
 	// date Fields.
 	private String month;
