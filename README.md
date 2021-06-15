@@ -17,13 +17,13 @@
   * Create Final Presentation Slide
 * 김민준
   * Create UML Diagram
-  * Create Application's GUI(main class)
+  * Create Application's GUI(Main class)
 * 이민아
   * Create Proposal Presentation Slide
   * Proposal Presentation
   * Create Plan class's Subclass(Appointment, Assignment, Goal)
 * 서은수
-  * Create Date & Plan class
+  * Create DateInfo & Plan class
   * Final Presentation
 
 
